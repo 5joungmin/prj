@@ -128,7 +128,7 @@ public class GonggoDTO {
 	private String seeker_age1;
 	private String seeker_age2;
 
-	private int salary;
+	private String  salary;
 	private String attendencetime;
 	private String leaveworktime;
 	private Date opendate;
@@ -1097,11 +1097,13 @@ public class GonggoDTO {
 		this.seeker_age2 = seeker_age2;
 	}
 
-	public int getSalary() {
+
+
+	public String getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 

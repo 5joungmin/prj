@@ -384,15 +384,25 @@ if(field_detail3Obj.val() == ',' && dept_code3Obj.val() != "0"){
 		}
 
 
-	if(new RegExp(/^[0-9]{1,2}$/).test(seeker_ageObj1.val()) == false){
+
+	
+	if(new RegExp(/^[0-9]{1,2}$/).test(seeker_ageObj1.val()) == false && age_irrelevantObj.is(':checked')== false ){
 		alert("지원자의 나이는 2자리까지만 입력해주세요1");
 		return false;
 	} 
-	if(new RegExp(/^[0-9]{1,2}$/).test(seeker_ageObj2.val()) == false ){
+	if(new RegExp(/^[0-9]{1,2}$/).test(seeker_ageObj2.val()) == false && age_irrelevantObj.is(':checked') == false){
 		alert("지원자의 나이는 2자리까지만 입력해주세요2");
 		return false;
-	} 
-	alert("11")
+		} 
+	
+	if((seeker_ageObj1.val() > seeker_ageObj2.val()) && age_irrelevantObj.is(':checked') == false){
+		alert("나이를 정확히 입력해주세요")
+		return false;
+	}
+
+	if(age_irrelevantObj.is(':checked') == true && seeker_ageObj1.val() != ''&& seeker_ageObj2.val() != ''){
+		alert("나이를 적고 나이무관을 선택하면 나이무관이 선택됩니다.");
+	}
 
 
 	if(choice2Obj.is(':checked') == true && benefit_code2Obj.val() == '0'){
@@ -753,8 +763,11 @@ if(field_detail3Obj.val() == ',' && dept_code3Obj.val() != "0"){
                   </td>
                </tr>
                <tr>
-                  <td>급여 : <select id="salary" class="salary" name="salary" onchange="toggleOtherSalary()">
-                        <option value="1000" ${requestScope.gonggoDTO.salary == '1000' ? 'selected' : ''}>2000만원 이하</option>
+                  <td>급여 : <input type="text" id="salary" class="salary" name="salary" value="${requestScope.gonggoDTO.salary}">    
+
+                  
+                  <%-- <select id="salary" class="salary" name="salary" onchange="toggleOtherSalary()">
+                        <option value="1000" ${requestScope.gonggoDTO.salary == '1000' ? 'selected' : ''}>1000만원 이하</option>
                         <option value="2000" ${requestScope.gonggoDTO.salary == '2000' ? 'selected' : ''}>2000~3000만원</option>
                         <option value="3000" ${requestScope.gonggoDTO.salary == '3000' ? 'selected' : ''}>3000~4000만원</option>
                         <option value="4000" ${requestScope.gonggoDTO.salary == '4000' ? 'selected' : ''}>4000~5000만원</option>
@@ -766,7 +779,7 @@ if(field_detail3Obj.val() == ',' && dept_code3Obj.val() != "0"){
                         <option value="0" ${requestScope.gonggoDTO.salary == '0' ? 'selected' : ''}>직접 입력</option>
                         </select>
                         <input type="text" id="other_salary" name="other_salary"
-                        value="${requestScope.gonggoDTO.other_salary}" class="hidden">
+                        value="${requestScope.gonggoDTO.other_salary}" class="hidden"> --%>
                         
                      
                   

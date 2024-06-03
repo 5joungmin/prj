@@ -135,8 +135,13 @@
 		,replace(substr(seeker_age,'4','2'),',','') as "seeker_age2"
 <!--   		,substr(seeker_age,1,2) as "seeker_age1" -->
 <!--   		,substr(seeker_age,4,2) as "seeker_age2" -->
-        ,salary
-        ,other_salary
+
+
+        , salary
+  
+
+
+
 		,attendencetime
 		,leaveworktime
 		,graduation
@@ -250,7 +255,6 @@
         opendate,
         closedate,
         gonggoreg_date,
-          other_salary,
         ph_d_candidate
       
         
@@ -262,14 +266,15 @@
         #{career},
         #{seeker_sex},
         #{seeker_age},
-         <choose>
-       	<when test="salary == 0">
-       		null,
-       	</when>
-       	<otherwise>
-       		#{salary},
-       	</otherwise>  
-       </choose>
+         #{salary},
+<!--          <choose> -->
+<!--        	<when test="salary == 0"> -->
+<!--        		null, -->
+<!--        	</when> -->
+<!--        	<otherwise> -->
+<!--        		#{salary}, -->
+<!--        	</otherwise>   -->
+<!--        </choose> -->
        
        
         #{attendencetime},
@@ -278,8 +283,7 @@
         #{content},
         #{opendate},
         #{closedate},
-        sysdate,
- 		#{other_salary}
+        sysdate
        
        
 
@@ -623,7 +627,6 @@
         ,g.closedate
         ,g.content
         ,g.ph_d_candidate
-        ,g.other_salary
         ,b.choice1
         ,b.choice2
         ,b.choice3
@@ -719,7 +722,6 @@
 		,closedate=#{closedate}
 		,graduation=#{graduation}
 		,content=#{content}
-		,other_salary=#{other_salary}
 		<choose>
 			<when test="ph_d_candidate != null and ph_d_candidate != ''">
 				,ph_d_candidate=#{ph_d_candidate}

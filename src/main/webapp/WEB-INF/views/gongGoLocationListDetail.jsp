@@ -44,11 +44,12 @@
   </style>
 	<script>
 
+
 	
 	function gonggoSupportForm() {
 	
 		var formObj = $("[name='getgonggoSupportForm']");
-		alert(formObj.serialize())
+	
 
 		$.ajax({
 
@@ -141,12 +142,20 @@
 					<td>성 별 : ${requestScope.GonggoDTO.seeker_sex}</td>
 				</tr>
 				<tr>
-					<td>급여 : <c:if test="${requestScope.GonggoDTO.salary != 0}">
-                    ${requestScope.GonggoDTO.salary}만원
-                    </c:if> <c:if
+					<td>급여 :
+					<script>
+					if(new RegExp(/^[0-9]{1,4}$/).test(seeker_ageObj1.val()) == false && age_irrelevantObj.is(':checked')== false ){
+						alert("지원자의 나이는 2자리까지만 입력해주세요1");
+						return false;
+					} 
+					</script>
+					  ${requestScope.GonggoDTO.salary}
+					<%--  <c:if test="${requestScope.GonggoDTO.salary != 0}">
+                    ${requestScope.GonggoDTO.salary}
+                    </c:if> --%> <%-- <c:if
 							test="${not empty requestScope.GonggoDTO.other_salary }">
                     ${requestScope.GonggoDTO.other_salary}만원
-                    </c:if>
+                    </c:if> --%>
 					</td>
 
 				</tr>

@@ -157,7 +157,7 @@
 
 
 /////////////////////필수/우대///////////////////////
-function add_row_plisu() {
+function add_row_plus() {
 	
     // 테이블의 ID를 이용하여 테이블 요소를 가져옵니다.
     var table = document.getElementById("benefit_row");
@@ -726,7 +726,7 @@ return false;
             </select>
              
             
-             <input type="button" onclick="add_row_plisu();" value="추가"> 
+             <input type="button" onclick="add_row_plus();" value="추가"> 
 
              <!-- 행 전체삭제 -->
              <!-- <input type="button" value="삭제" onclick="delete_row(this)"> -->
@@ -776,19 +776,21 @@ return false;
                 <tr>
                 <td>연봉</td>
                 <td>
-                <select id="salary" class="salary" name="salary" onchange="toggleOtherSalary()">
-            <option value="1000">2000만원 이하</option>
-            <option value="2000">2000~3000만원</option>  
-            <option value="3000">3000~4000만원</option>                        
-            <option value="4000">4000~5000만원</option>     
-            <option value="5000">5000~6000만원</option>
-            <option value="6000">6000~7000만원</option>
-            <option value="7000">7000~8000만원</option>
-            <option value="8000">8000~9000만원</option>
+               <input type="text" id="salary" name="salary" placeholder="(선택) 직접기입" > 
+                
+            <!--     <select id="salary" class="salary" name="salary" onchange="toggleOtherSalary()">
+            <option value="1000">1000만원</option>
+            <option value="2000">2000만원</option>  
+            <option value="3000">3000만원</option>                        
+            <option value="4000">4000만원</option>     
+            <option value="5000">5000만원</option>
+            <option value="6000">6000만원</option>
+            <option value="7000">7000만원</option>
+            <option value="8000">8000만원</option>
             <option value="10000">1억 이상</option>                       
             <option value="0">직접 입력</option>
         </select>
-        <input type="text" id="other_salary" name="other_salary" placeholder="(선택) 직접기입" class="hidden">
+        <input type="text" id="other_salary" name="other_salary" placeholder="(선택) 직접기입" class="hidden"> -->
                    
                   
                    
