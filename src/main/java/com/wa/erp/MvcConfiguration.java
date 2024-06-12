@@ -51,6 +51,7 @@ public class MvcConfiguration implements WebMvcConfigurer{
 				,"/buupList.do"
 				,"/prj.do"
 				,"/gongMo.do"
+				,"/developer_search_form.do"
 				);
 		
 		

@@ -120,12 +120,7 @@ public Map<String,String> gongGoRegProc (
 		
 			System.out.println(g_no);
 		GonggoDTO gonggoDTO = this.gonggoService.getGonggo(g_no);
-
-			System.out.println("::"+gonggoDTO.getCareer());
-			System.out.println("::"+gonggoDTO.getBenefit_code1());
-			System.out.println("::"+gonggoDTO.getAge_irrelevant());
-			System.out.println("::"+gonggoDTO.getSalary());
-			System.out.println("::"+gonggoDTO.getPosition_code1());
+		
 		ModelAndView mav = new ModelAndView();
 
 		mav.addObject("gonggoDTO", gonggoDTO);

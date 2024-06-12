@@ -80,6 +80,8 @@
          order by ${sort}
          ,13 asc
    , gonggoreg_date
+   ,business_industry asc
+   ,work_place asc
       </if>
       
       
@@ -129,9 +131,17 @@
       ,work_place
       ,career
       ,seeker_sex
-      ,replace(substr(seeker_age,1,2),',','')||'~'||replace(substr(seeker_age,3,3),',','') as"seeker_age"
-        ,salary
-        ,other_salary
+      ,replace(substr(seeker_age,'1','2'),',','') as "seeker_age1"
+      ,replace(substr(seeker_age,'4','2'),',','') as "seeker_age2"
+<!--         ,substr(seeker_age,1,2) as "seeker_age1" -->
+<!--         ,substr(seeker_age,4,2) as "seeker_age2" -->
+
+
+        , salary
+  
+
+
+
       ,attendencetime
       ,leaveworktime
       ,graduation
@@ -140,6 +150,7 @@
       ,closedate
       ,content
       ,ph_d_candidate
+
       ,closedate
       ,opendate
       ,round(closedate - sysdate) as "gonggoreg_date"
@@ -244,7 +255,6 @@
         opendate,
         closedate,
         gonggoreg_date,
-          other_salary,
         ph_d_candidate
       
         
@@ -256,14 +266,15 @@
         #{career},
         #{seeker_sex},
         #{seeker_age},
-         <choose>
-          <when test="salary == 0">
-             null,
-          </when>
-          <otherwise>
-             #{salary},
-          </otherwise>  
-       </choose>
+         #{salary},
+<!--          <choose> -->
+<!--           <when test="salary == 0"> -->
+<!--              null, -->
+<!--           </when> -->
+<!--           <otherwise> -->
+<!--              #{salary}, -->
+<!--           </otherwise>   -->
+<!--        </choose> -->
        
        
         #{attendencetime},
@@ -272,8 +283,10 @@
         #{content},
         #{opendate},
         #{closedate},
-        sysdate,
-       #{other_salary}
+        sysdate
+       
+       
+
 
         <if test="ph_d_candidate != null and ph_d_candidate != ''"> ,#{ph_d_candidate} </if>
         <if test="ph_d_candidate == null or ph_d_candidate == ''"> ,' ' </if>
@@ -604,7 +617,7 @@
       ,g.career
       ,g.seeker_sex
       ,substr(g.seeker_age,'1','2') as "seeker_age1"
-      ,replace(substr(g.seeker_age,'3','2'), ',','') as "seeker_age2"
+      ,substr(g.seeker_age,'4','2') as "seeker_age2"
       ,g.salary
       ,g.attendencetime
       ,g.leaveworktime
@@ -614,7 +627,6 @@
         ,g.closedate
         ,g.content
         ,g.ph_d_candidate
-        ,g.other_salary
         ,b.choice1
         ,b.choice2
         ,b.choice3
@@ -703,14 +715,13 @@
       manager_name=#{manager_name}
       ,career=#{career}
       ,seeker_sex=#{seeker_sex}
-      ,seeker_age=replace(#{seeker_age}, ',', '')
+      ,seeker_age=#{seeker_age}
       <!-- ,seeker_age=#{seeker_age} -->
       ,salary=#{salary}
       ,opendate=#{opendate}
       ,closedate=#{closedate}
       ,graduation=#{graduation}
       ,content=#{content}
-      ,other_salary=#{other_salary}
       <choose>
          <when test="ph_d_candidate != null and ph_d_candidate != ''">
             ,ph_d_candidate=#{ph_d_candidate}
@@ -719,6 +730,8 @@
             ,ph_d_candidate=null
          </otherwise>
       </choose>
+
+   
       where
       g_no=#{g_no}
 
