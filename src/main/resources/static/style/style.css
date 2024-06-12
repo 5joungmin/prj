@@ -17,7 +17,7 @@
     	border: 1px solid #ddd;
         padding: 8px;
     	text-align: center;
-        background-color: #f2f2f2;
+        background-color: #A9A9A9;
     }
 
     tr:nth-child(odd) {
@@ -31,222 +31,238 @@
 <!--    -->
 
 * {
-  margin:0;   /* 마진 리셋 */
-  padding:0;   /* 패딩 리셋 */
-  box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
+  margin:0;   
+  padding:0;   
+  box-sizing: border-box;   
 }
 a {
-  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+  text-decoration:none;  
 }
 ul {
   list-style: none;
 }
 
 #container {
-  margin:0 auto;  /* 화면 중앙에 배치 */
-  width:1200px;    /* 너비 */
+  margin:0 auto; 
+  width:1200px;    
   position : relative;
 }
 
 #likecompany {
-  position: absolute; /*절대 위치*/
-  top: 130px; /* 위에서 130px 아래 */
-  right: 230px; /* 오른쪽에서 280px 왼쪽 */
-  z-index: 1000; /* 최상단에 배치 */
-  background-color: #ff69b4; /* 핑크 계열 배경색 */
-  color: #fff; /* 버튼 글자색 */
-  width: 180px; /* 버튼 너비 */
-  height: 40px; /* 버튼 높이 */
-  border-radius: 5px; /* 둥근 모서리 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: 600; /* 글자 굵기 */
-  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
-  font-size: 18px; /* 글자 크기 */
-  display: flex; /* flexbox 레이아웃 사용 */
-  align-items: center; /* 수직 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
+  position: absolute; 
+  top: 130px; 
+  right: 230px; 
+  z-index: 1000; 
+  background-color: #ff69b4; 
+  color: #fff; 
+  width: 180px; 
+  height: 40px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: background-color 0.3s;
+  font-size: 18px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 #likecompany:hover {
-  background-color: #ff1493; /* 마우스를 올렸을 때 배경색 */
+  background-color: #ff1493; 
 }
 
-/*********************************/
+/******************************** */
 /* 헤더 영역 - 로고와 내비게이션 */
-/*********************************/
+/******************************** */
 header {
-  width: 100%; /* 너비 */
-  height: 100px; /* 높이 */ 
+  width: 100%; 
+  height: 100px; 
   background-color: #07c;
-  position: relative; /* 상대 위치 설정 */
-  z-index: 999; /* 기본 z-index 설정 */
-  display: flex; /* Flexbox 레이아웃 사용 */
-  align-items: center; /* 수직 중앙 정렬 */
-  padding: 0 20px; /* 좌우 패딩 */
+  position: relative; 
+  z-index: 999; 
+  display: flex; 
+  align-items: center; 
+  padding: 0 20px; 
+  border-radius:10px;
 }
 
 /* 로고 */
 #logo { 
-  flex: 1; /* 나머지 공간 채우기 */
+  flex: 1; 
 }
 #logo h1 {
   font-family: 'Merienda', cursive;
   font-weight: 700;
-  font-size: 40px; /* 글자 크기 */
-  color: #fff; /* 글자 색 */
-  text-shadow: 0 -1px 0 #222; /* 그림자 색 */
+  font-size: 40px; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #222; 
 }
 
 /* 내비게이션 */
 nav {  
-  flex: 5; /* 나머지 공간 채우기 */
-  display: flex; /* Flexbox 레이아웃 사용 */
-  justify-content: center; /* 중앙 정렬 */
+  flex: 5; 
+  display: flex; 
+  justify-content: center; 
 }
 #topMenu {  
   height: 60px; 
-  list-style: none; /* 기본 리스트 스타일 제거 */
+  list-style: none; 
   margin-top: 40px;
   padding: 0;
-  display: flex; /* Flexbox 사용 */
-  align-items: center; /* 수직 중앙 정렬 */
+  display: flex; 
+  align-items: center; 
 }
 #topMenu > li {
-  position: relative; /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */  
+  position: relative; 
 }
 #topMenu > li > a {
-  display: block; /* 링크 텍스트는 블록으로 */ 
-  color: #fff; /* 글자 색 */
-  font-weight: 600; /* 글자 굵기 */
-  text-shadow: 0 1px #07c; /* 그림자 추가 */
-  padding: 20px 30px; /* 패딩 */ 
+  display: block; 
+  color: #fff; 
+  font-weight: 600; 
+  text-shadow: 0 1px #07c; 
+  padding: 20px 30px; 
 }
 #topMenu > li > a > span {
-  font-size: 0.5em; /* 서브 메뉴가 있는 항목에 화살표 표시 */   
+  font-size: 0.5em; 
 }
 #topMenu > li > a:hover {
-  color: #000; /* 마우스 오버하면 색상 바뀜 */ 
-  text-shadow: 0 -1px #07c; /* 글자가 너무 굵어지지 않도록 */
+  color: #000;
+  text-shadow: 0 -1px #07c;
 }
 
-#topMenu > li > ul { /* 서브 메뉴 스타일 */
-  display: none; /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
-  position: absolute; /* 서브 메뉴 포지셔닝 */ 
+#topMenu > li > ul { 
+  border-radius:10px;
+  display: none; 
+  position: absolute; 
   width: 160px;
-  background: #fff; /* 슬라이드 쇼 비치도록 배경 색 조절 */
+  background: rgba(255, 255, 255, 0.75); 
   left: 20px;     
   margin: 0;
 }
 #topMenu > li > ul > li {    
-  padding: 10px 10px 10px 30px; /* 서브 메뉴 항목 */
+ margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+             font-weight: bold; 
+             
 }
 #topMenu > li > ul > li > a { 
   font-size: 14px;   
   padding: 10px;
-  color: #000;  
+  color: #007bff;  
 }
 #topMenu > li:hover > ul {
-  display: block; /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
-  z-index: 10; /* 슬라이드 쇼에 가리지 않게 조절 */ 
+  display: block; 
+  z-index: 10; 
+}
+#topMenu > li > ul > li:hover {    
+	 background-color: #f0f0f0;
+            transform: scale(1.05);
 }
 #topMenu > li > ul > li > a:hover {
-  color: #f00; /* 서브 메뉴 마우스 오버하면 색상 바뀜 */   
+  color: #f00; 
 }
 
 /* 로그인 버튼 스타일 */
 #loginButton {
-  position: absolute; /* 절대 위치 */
-  top: 10px; /* 위에서 10px 아래 */
-  right: 40px; /* 오른쪽에서 10px 왼쪽 */
-  z-index: 1000; /* 최상단에 배치 */
-  background-color: #fff; /* 버튼 배경색 */
-  color: #07c; /* 버튼 글자색 */
-  padding: 5px 10px; /* 패딩 */
-  border-radius: 5px; /* 둥근 모서리 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: 600; /* 글자 굵기 */
-  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
-  font-size: 14px; /* 글자 크기 */
+  position: absolute;
+  top: 10px; 
+  right: 40px;
+  z-index: 1000; 
+  background-color: #fff; 
+  color: #07c; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+  font-size: 14px; 
 }
 
 #loginButton:hover {
-  background-color: #0073e6; /* 마우스 오버 시 배경색 */
-  color: #fff; /* 마우스 오버 시 글자색 */
+  background-color: #0073e6; 
+  color: #fff; 
 }
 
 #logoutButton {
-  position: absolute; /* 절대 위치 */
-  top: 10px; /* 위에서 10px 아래 */
-  right: 135px; /* 오른쪽에서 10px 왼쪽 */
-  z-index: 1000; /* 최상단에 배치 */
-  background-color: #fff; /* 버튼 배경색 */
-  color: #07c; /* 버튼 글자색 */
-  padding: 5px 10px; /* 패딩 */
-  border-radius: 5px; /* 둥근 모서리 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: 600; /* 글자 굵기 */
-  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
-  font-size: 14px; /* 글자 크기 */
+  position: absolute; 
+  top: 10px; 
+  right: 135px; 
+  z-index: 1000; 
+  background-color: #fff; 
+  color: #07c; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+  font-size: 14px; 
 }
 
 #logoutButton:hover {
-  background-color: #0073e6; /* 마우스 오버 시 배경색 */
-  color: #fff; /* 마우스 오버 시 글자색 */
+  background-color: #0073e6; 
+  color: #fff; 
 }
 
 #myPageButton {
-  position: absolute; /* 절대 위치 */
-  top: 10px; /* 위에서 10px 아래 */
-  right: 10px; /* 오른쪽에서 10px 왼쪽 */
-  z-index: 1000; /* 최상단에 배치 */
-  background-color: #fff; /* 버튼 배경색 */
-  color: #07c; /* 버튼 글자색 */
-  padding: 5px 10px; /* 패딩 */
-  border-radius: 5px; /* 둥근 모서리 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: 600; /* 글자 굵기 */
-  transition: background-color 0.3s; /* 배경색 전환 애니메이션 */
-  font-size: 14px; /* 글자 크기 */
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  z-index: 1000; 
+  background-color: #fff; 
+  color: #07c;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+  font-size: 14px; 
 }
 
 #myPageButton:hover {
-  background-color: #0073e6; /* 마우스 오버 시 배경색 */
-  color: #fff; /* 마우스 오버 시 글자색 */
+  background-color: #0073e6; 
+  color: #fff; 
 }
 
 #welCome{
-  position: absolute; /* 절대 위치 */
-  top: 10px; /* 위에서 10px 아래 */
-  right: 250px; /* 오른쪽에서 10px 왼쪽 */
-  z-index: 1000; /* 최상단에 배치 */
-/*   background-color: #fff; 버튼 배경색 */
-/*   color: #07c; 버튼 글자색 */
-  padding: 5px 10px; /* 패딩 */
-/*   border-radius: 5px; 둥근 모서리 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: 600; /* 글자 굵기 */
-/*   transition: background-color 0.3s; 배경색 전환 애니메이션 */
-  font-size: 14px; /* 글자 크기 */
+  position: absolute; 
+  top: 10px; 
+  right: 250px; 
+  z-index: 1000; 
+  background-color: #fff; 
+  color: #07c; 
+  padding: 5px 10px; 
+  border-radius: 5px;
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+  font-size: 14px; 
 }
-/********************************/
+/******************************* */
 /*   이미지 슬라이드 쇼 영역    */
-/********************************/
+/******************************* */
 .size_set { width: inherit;}
 
 #slideShow {
   position: relative;
-  clear:both;   /* 플로팅 해제 */
-  width:100%;    /* 너비 */ 
-  height:400px;   /* 높이 */ 
-  overflow:hidden;   /* 영역 넘치면 감춤 */ 
+  clear:both;  
+  width:100%;    
+  height:400px;   
+  overflow:hidden;   
   position: relative;
 }
 #slides {
   position: flex;
 }
 #slides > img {
-  width:100%;  /* 너비 */
+  width:100%;  
   height:auto;
-  float:left;  /* 가로로 배치 */
+  float:left;  
   transition: transform 0.5s ease;
 }
 
@@ -263,71 +279,71 @@ nav {
 
 button{
   position: absolute;
-  height:50%;  /* 위아래 가득 차게 */ 
+  height:50%;  
   top:50;
-  border:none;  /* 테두리 없이 */  
+  border:none; 
   padding:20px;
-  background-color: transparent;  /* 투명 배경 */ 
-  color:#000;  /* 화살표 색은 검정 */  
-  font-weight:800;  /* 굵게 */ 
-  font-size: 30px;  /* 화살표 크기 */ 
-  opacity: 0.5;  /*반투명*/
+  background-color: transparent;  
+  color:#000;  
+  font-weight:800;  
+  font-size: 30px;  
+  opacity: 0.5;  
 }
 #prev {
-  left:0;  /* 왼쪽으로 붙여서 */ 
+  left:0;  
 }
 #next {
-  right:0;  /* 오른쪽으로 붙여서 */ 
+  right:0;  
 }
 button:hover {
-  background-color:#222;  /* 짙은 회색 배경 */
-  color:#fff;   /* 흰색 화살표 */ 
-  opacity:0.7;   /* 불투명도를 조금 높임 */ 
-  cursor:pointer;  /* 커서 모양을 포인터로 */ 
+  background-color:#222;  
+  color:#fff;   
+  opacity:0.7;   
+  cursor:pointer;  
 }
 button:focus {
-  outline:0;  /* 아웃트라인 없앰 */
+  outline:0; 
 }
-/**************************************/
+/************************************* */
 /*   콘텐츠 영역  - 탭 메뉴와 퀵 링크 */
-/**************************************/
+/************************************* */
 
 #contents{  
-  width:100%;   /* 너비 */
-  height:300px;  /* 높이 */   
-  margin-top:20px;  /* 마진 추가 */
+  width:100%;  
+  height:300px;  
+  margin-top:20px;  
 }
 
 /* 탭 메뉴 */
 #tabMenu{  
-  float:left;  /* 왼쪽으로 플로팅 */ 
-  width:600px;   /* 너비 */ 
-  height:100%;   /* 높이 */
-  margin-top:10px;  /* 탭 메뉴 위쪽에 여백 두기 */
+  float:left;  
+  width:400px;   
+  height:100%;   
+  margin-top:10px;  
 }
 #tabMenu  input[type="radio"] {
-  display:none;  /* 라디오 버튼 감춤 */ 
+  display:none; 
 }
-#tabMenu label {  /* 탭 제목 스타일 */ 
-  display:inline-block;  /* 탭들을 가로로 배치 */
-  margin:0 0;  /* 마진 */ 
-  padding:15px 25px;  /* 패딩 */
-  font-weight:600;   /* 글자 굵기 */
-  text-align: center;   /* 글자 정렬 */
-  color:#aaa;  /* 글자 색 */ 
-  border:1px solid transparent;  /* 테두리 */ 
+#tabMenu label { 
+  display:inline-block;  
+  margin:0 0;  
+  padding:15px 25px;  
+  font-weight:600;   
+  text-align: center;   
+  color:#aaa;  
+  border:1px solid transparent;  
 }
-#tabMenu label:hover {  /* 마우스 오버했을 때 탭 제목 스타일 */
+#tabMenu label:hover {  
   color:#222;  
   cursor:pointer;
 }
-#tabMenu input:checked + label {  /* 활성화된 탭 제목 스타일 */ 
+#tabMenu input:checked + label {  
   color:#b00;
   border:1px solid #ddd;
   background-color: #eee;
 }
 
-.tabContent {  /* 탭 내용 스타일 */
+.tabContent { 
   display:none;
   padding:20px 0 0;
   border-top:1px solid #ddd;
@@ -345,7 +361,7 @@ button:focus {
   line-height:2.5;
 }
 #gallery ul li{
-  display:inline;  /* 이미지 가로로 배치 */
+  display:inline;  
 }
 
 #tab1:checked ~ #notice, 
@@ -353,32 +369,65 @@ button:focus {
   display:block;
 }
 
-/* 퀵 링크 */ 
-#links{  
-  float:right;   /* 오른쪽으로 플로팅 */
-  width:600px;   /* 너비 */
-  height:100%;   /* 높이 */
-  margin-top:20px;  /* 마진 추가 */
-}
-#links ul{
-  padding:0;  /* 패딩 */ 
-  overflow: hidden;  /* 넘치는 것은 감춤 */
-}
-#links ul li{
-  float:left;  /* 가로로 배치 */
-  width:50%;  /* 1/3 크기만큼씩 */
-  text-align:center;  /* 가운데 정렬 */
-  margin:10px 0;  /* 마진 */
+
+#popular {
+  float: left; 
+  width: calc(33.33% - 10px); 
+  margin-right: 20px; 
 }
 
+/* 퀵 링크  */
+#links{  
+  float:right;   
+  width:800px;   
+  height:80%;   
+  margin-top:20px;  
+}
+#links ul{
+  padding:0; 
+}
+#links ul li{
+  float:left;  
+  text-align:center;  
+  margin:10px 0; 
+}
+#links ul li:first-child {
+  width: 800px;  
+  
+  height:262px;
+}
+
+
 #links ul li a span{
-  display:block;  /* 블록 레벨로 */ 
-  margin:0 auto;  /* 가운데 배치 */ 
-  width:150px;  /* 가로 크기 */ 
-  height:150px;  /* 세로 크기 */
-  border-radius:100%;  /* 테두리 둥글게. border-radius: 150px로 해도 됨 */ 
-  border:1px solid #ddd;  /* 테두리 스타일 */
-  line-height:150px;  /* 수직으로 중간에 오게 */ 
+  display:block; 
+  margin:0 auto;  
+  width:150px;  
+  height:150px;  
+  border-radius:100%;  
+  border:1px solid #ddd;  
+  line-height:150px;  
+}
+#links2 {
+    float: left;
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+}
+
+#links2 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#links2 ul li {
+    width: 33%; 
+    float: left; 
+}
+#links2 ul li:first-child {
+    display: flex;
+    justify-content: left;
+    margin: 20px 0; 
 }
 
 #quick-icon1 {
@@ -392,14 +441,14 @@ button:focus {
 }
 
 #links ul li a p {
-  margin-top:15px;  /* 위쪽 마진 */
-  font-weight:600;  /* 글자 굵기 */
-  color:#666;  /* 글자 색 */
+  margin-top:15px;  
+  font-weight:600; 
+  color:#666;  
 }
 
-/******************/
+/***************** */
 /*   푸터 영역    */
-/******************/
+/***************** */
 
 /*수정영역 */
 
@@ -410,18 +459,20 @@ html, body {
 #wrap {
     min-height: 100%;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 500px;
 }
 
-footer {
+#footer {
+    position: fixed;
     bottom: 0;
+    width: 100%;
 }
 /*  */
 
 
 footer{   
-  width:100%;   /* 너비 */
-  height:100px;  /* 높이 */
+  width:100%;   
+  height:100px;  
   border-top:2px solid #222;
 }
 #bottomMenu{
@@ -433,33 +484,33 @@ footer{
   margin-top:15px;  
 }
 #bottomMenu ul li{
-  float:left;  /* 가로로 배치 */ 
+  float:left;  
   padding:5px 20px;
-  border-right:1px solid #ddd;   /* 항목 오른쪽에 테두리 */ 
+  border-right:1px solid #ddd;   
 }
 #bottomMenu ul li:last-child{
-  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+  border:none;  
 }
 #bottomMenu ul li a, #bottomMenu ul li a:visited {  
-  font-size:15px;  /* 글자 크기 */ 
-  color:#666;   /* 글자 색 */ 
+  font-size:15px;  
+  color:#666;   
 }
 #sns {
   position:absolute;  
-  right:0;  /* 오른쪽 끝에 배치 */ 
+  right:0;  
 }
 #sns ul li{
-  border:none;  /* 테두리 없이 */
+  border:none;  
   padding:5px;   
 } 
 #company{
-  clear:left;  /* 플로팅 해제. clear:both도 가능 */
-  margin-top:25px;  /* 위쪽 마진 */
-  margin-left:20px;  /* 왼쪽 마진 */ 
+  clear:left;  
+  margin-top:25px;  
+  margin-left:20px; 
 }
 p {
-  font-size:14px;  /* 글자 크기 */
-  color:#aaa;    /* 글자 색*/ 
+  font-size:14px;  
+  color:#aaa;    
 }
 
   .hidden {
@@ -472,17 +523,17 @@ p {
 
 
 
-/* 리뷰작성 별점 (기업정보 상세페이지)*/
+/* 리뷰작성 별점 (기업정보 상세페이지) */
 .fixed-table {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         background-color: white;
-        border-bottom: 1px solid #ddd; /* 선택사항: 테이블 아래에 선 추가 */
+        border-bottom: 1px solid #ddd; 
     }
     .content {
-        margin-top: 50px; /* 고정된 테이블의 높이만큼 컨텐츠를 내림 */
+        margin-top: 50px; 
     }
     
 
@@ -513,15 +564,15 @@ textarea {
 }
 
 .likeButton i {
-    color: black; /* 기본 색상 */
+    color: black;
 }
 
 .likeButton.clicked i {
-    color: red; /* 좋아요를 눌렀을 때 색상 */
+    color: red; 
 }
 
 .likeButton:hover i {
-    color: red; /* 마우스 호버 시 색상 */
+    color: red; 
 }
 
 

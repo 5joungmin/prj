@@ -100,7 +100,7 @@
 	<div id="container">
 		<%@ include file="header.jsp"%>
 		<div id="wrap" class="container">
-			<h1 style="text-align: center;">공지사항 상세페이지</h1>
+			<h1 style="text-align: center;">공지사항 수정/삭제 페이지</h1>
 			<form action="submit.php" method="POST" name="noticeUpDelForm"
 				class="commentRegForm">
 				<table
